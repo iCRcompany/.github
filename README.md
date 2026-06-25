@@ -11,6 +11,7 @@ Templates defined here are automatically used as defaults across all repositorie
 | [Bug Report](.github/ISSUE_TEMPLATE/bug_report.yml) | Report a software issue or unexpected behavior |
 | [Feature Request](.github/ISSUE_TEMPLATE/feature_request.yml) | Request a new feature or enhancement |
 | [Task](.github/ISSUE_TEMPLATE/task.yml) | Internal development or maintenance task |
+| [Technical Support Issue](.github/ISSUE_TEMPLATE/technical_support.yml) | Track a customer, machine, installation, or field support issue |
 
 ## Overriding Templates
 
