@@ -1,5 +1,5 @@
 name: Release Candidate
-description: Track a release candidate build, installer location, testing, and release readiness
+description: Track a release candidate build, installer location, testing, risk review, and release approval
 title: "[Release Candidate]: "
 labels:
   - Release Candidate
@@ -19,10 +19,17 @@ body:
       label: Changelog
       description: List the changes included in this release candidate.
       placeholder: |
-        - Added:
-        - Changed:
-        - Fixed:
-        - Removed:
+        Added:
+        - 
+
+        Changed:
+        - 
+
+        Fixed:
+        - 
+
+        Removed:
+        - 
     validations:
       required: true
 
@@ -30,67 +37,89 @@ body:
     id: installer_location
     attributes:
       label: Installer Location
-      description: Provide the installer path, shared folder, release URL, or artifact location.
+      description: Provide the installer path, shared folder, GitHub release link, or build artifact location.
       placeholder: |
         Installer:
         Readme:
         Build artifacts:
+        Notes:
     validations:
       required: true
 
-  - type: input
+  - type: textarea
     id: source_branch_commit
     attributes:
       label: Source Branch / Commit
-      description: Provide the branch, commit hash, pull request, or tag used for this build.
-      placeholder: e.g. release/2.2.1, commit abc1234, PR #42, tag v2.2.1-rc1
+      description: Provide the exact source branch, commit hash, tag, or build reference used to create the release candidate.
+      placeholder: |
+        Branch:
+        Commit:
+        Tag:
+        Build/Run:
     validations:
-      required: false
+      required: true
 
   - type: textarea
-    id: build_environment
+    id: related_issues_pull_requests
     attributes:
-      label: Build Environment
-      description: Provide build machine and environment details for this release candidate.
+      label: Related Issues / Pull Requests
+      description: List related GitHub issues, feature requests/design changes, bug reports, support issues, and pull requests.
       placeholder: |
-        Build machine:
-        Configuration:
-        Platform:
-        Code signing:
+        Issues:
+        - #
+
+        Pull Requests:
+        - #
+
         Notes:
     validations:
-      required: false
+      required: true
 
   - type: checkboxes
-    id: requirements_for_release
+    id: testing_checklist
     attributes:
-      label: Requirements for Release
-      description: Confirm release-readiness items are complete.
+      label: Testing Checklist
+      description: Confirm release-readiness testing items are complete.
       options:
         - label: "Run through testing workflow: https://docs.google.com/forms/d/1ynKPiYMX_eelifCTsvRVGKH_Ej84-sJLEO0D_jlTBOg/edit"
           required: true
         - label: Confirm installer builds successfully
         - label: Confirm installer is code signed
-        - label: Confirm installer launches without SmartScreen/signature warnings
         - label: Confirm version number is correct in the application
         - label: Confirm version number is correct in the installer
-        - label: Confirm Readme/release notes are included or updated
-        - label: Confirm upgrade/install/uninstall behavior was tested
+        - label: Confirm install was tested
+        - label: Confirm upgrade was tested, if applicable
+        - label: Confirm uninstall was tested, if applicable
+        - label: Confirm basic application launch was tested
+        - label: Confirm release candidate testing workflow was completed
         - label: Confirm no blocking issues remain
 
-  - type: textarea
-    id: testing_notes
+  - type: checkboxes
+    id: risk_review_complete
     attributes:
-      label: Testing Notes
-      description: Summarize test results, failed tests, known issues, skipped tests, or site-specific notes.
-    validations:
-      required: false
+      label: Risk Review Complete
+      description: Confirm that risk was reviewed before release.
+      options:
+        - label: Risk review completed for included changes
+          required: true
+        - label: Any new or changed risks are documented in related issues
+        - label: Risk mitigations were tested or reviewed where applicable
+        - label: No unresolved high-risk items remain without approval
 
   - type: textarea
-    id: known_issues_risks
+    id: known_issues
     attributes:
-      label: Known Issues / Risks
-      description: Describe known issues, limitations, workarounds, or risks before release.
+      label: Known Issues
+      description: Describe known issues, limitations, workarounds, skipped tests, or items intentionally deferred.
+      placeholder: |
+        Known issues:
+        - 
+
+        Workarounds:
+        - 
+
+        Deferred items:
+        - 
     validations:
       required: false
 
@@ -106,4 +135,4 @@ body:
         - Blocked
         - Rejected
     validations:
-      required: false
+      required: true
