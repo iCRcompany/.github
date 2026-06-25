@@ -1,0 +1,109 @@
+name: Release Candidate
+description: Track a release candidate build, installer location, testing, and release readiness
+title: "[Release Candidate]: "
+labels:
+  - Release Candidate
+body:
+  - type: input
+    id: release_version
+    attributes:
+      label: Release Version
+      description: Enter the release candidate version number.
+      placeholder: e.g. 2.2.1.14
+    validations:
+      required: true
+
+  - type: textarea
+    id: changelog
+    attributes:
+      label: Changelog
+      description: List the changes included in this release candidate.
+      placeholder: |
+        - Added:
+        - Changed:
+        - Fixed:
+        - Removed:
+    validations:
+      required: true
+
+  - type: textarea
+    id: installer_location
+    attributes:
+      label: Installer Location
+      description: Provide the installer path, shared folder, release URL, or artifact location.
+      placeholder: |
+        Installer:
+        Readme:
+        Build artifacts:
+    validations:
+      required: true
+
+  - type: input
+    id: source_branch_commit
+    attributes:
+      label: Source Branch / Commit
+      description: Provide the branch, commit hash, pull request, or tag used for this build.
+      placeholder: e.g. release/2.2.1, commit abc1234, PR #42, tag v2.2.1-rc1
+    validations:
+      required: false
+
+  - type: textarea
+    id: build_environment
+    attributes:
+      label: Build Environment
+      description: Provide build machine and environment details for this release candidate.
+      placeholder: |
+        Build machine:
+        Configuration:
+        Platform:
+        Code signing:
+        Notes:
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: requirements_for_release
+    attributes:
+      label: Requirements for Release
+      description: Confirm release-readiness items are complete.
+      options:
+        - label: "Run through testing workflow: https://docs.google.com/forms/d/1ynKPiYMX_eelifCTsvRVGKH_Ej84-sJLEO0D_jlTBOg/edit"
+          required: true
+        - label: Confirm installer builds successfully
+        - label: Confirm installer is code signed
+        - label: Confirm installer launches without SmartScreen/signature warnings
+        - label: Confirm version number is correct in the application
+        - label: Confirm version number is correct in the installer
+        - label: Confirm Readme/release notes are included or updated
+        - label: Confirm upgrade/install/uninstall behavior was tested
+        - label: Confirm no blocking issues remain
+
+  - type: textarea
+    id: testing_notes
+    attributes:
+      label: Testing Notes
+      description: Summarize test results, failed tests, known issues, skipped tests, or site-specific notes.
+    validations:
+      required: false
+
+  - type: textarea
+    id: known_issues_risks
+    attributes:
+      label: Known Issues / Risks
+      description: Describe known issues, limitations, workarounds, or risks before release.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: approval_release_decision
+    attributes:
+      label: Approval / Release Decision
+      description: Select the current release decision state.
+      options:
+        - Ready for testing
+        - Testing in progress
+        - Approved for release
+        - Blocked
+        - Rejected
+    validations:
+      required: false
