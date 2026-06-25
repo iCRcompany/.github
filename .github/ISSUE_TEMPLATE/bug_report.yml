@@ -2,58 +2,107 @@ name: Bug Report
 description: Report a software issue or unexpected behavior
 title: "[Bug]: "
 labels:
-  - bug
-body:
-  - type: input
-    id: software_version
-    attributes:
-      label: Software Version
-      description: What version of the software are you using?
-      placeholder: e.g. 1.2.3
-    validations:
-      required: true
 
-  - type: input
-    id: area
-    attributes:
-      label: Area
-      description: Which area or component is affected?
-      placeholder: e.g. Authentication, API, UI
-    validations:
-      required: true
+* bug
+  body:
 
-  - type: textarea
-    id: problem
-    attributes:
-      label: Problem
-      description: Describe the issue or unexpected behavior.
-    validations:
-      required: true
+* type: textarea
+  id: issue_summary
+  attributes:
+  label: Issue Summary
+  description: Briefly summarize the issue.
+  placeholder: Describe the issue at a high level.
+  validations:
+  required: true
 
-  - type: textarea
-    id: steps_to_reproduce
-    attributes:
-      label: Steps to Reproduce
-      description: Provide step-by-step instructions to reproduce the issue.
-      placeholder: |
-        1. Go to '...'
-        2. Click on '...'
-        3. See error
-    validations:
-      required: true
+* type: input
+  id: software_version
+  attributes:
+  label: Software Version
+  description: What version of the software are you using?
+  placeholder: e.g. XC2 2.2.1.14
+  validations:
+  required: true
 
-  - type: textarea
-    id: expected_result
-    attributes:
-      label: Expected Result
-      description: What did you expect to happen?
-    validations:
-      required: true
+* type: textarea
+  id: observed_machine
+  attributes:
+  label: Observed Machine
+  description: What machine, scanner, detector, operating system, or hardware was this observed on?
+  placeholder: |
+  Customer/Site:
+  Computer Name:
+  Windows Version:
+  Scanner/Gantry:
+  Detector:
+  Recotom Version:
+  Vivix / DR SDK Version:
+  validations:
+  required: false
 
-  - type: textarea
-    id: logs_screenshots
-    attributes:
-      label: Logs/Screenshots
-      description: Attach any relevant logs or screenshots to help diagnose the problem.
-    validations:
-      required: false
+* type: input
+  id: area
+  attributes:
+  label: Area
+  description: Which area or component is affected?
+  placeholder: e.g. Acquisition, Reconstruction, DICOM, Installer, Licensing, Hardware / Driver
+  validations:
+  required: true
+
+* type: textarea
+  id: problem
+  attributes:
+  label: Problem / Actual Behavior
+  description: Describe the issue or unexpected behavior.
+  placeholder: What happened?
+  validations:
+  required: true
+
+* type: textarea
+  id: steps_to_reproduce
+  attributes:
+  label: Steps To Reproduce
+  description: Provide step-by-step instructions to reproduce the issue.
+  placeholder: |
+  1. Go to '...'
+  2. Click on '...'
+  3. See error
+  validations:
+  required: true
+
+* type: textarea
+  id: expected_behavior
+  attributes:
+  label: Expected Behavior
+  description: What did you expect to happen?
+  placeholder: What should have happened?
+  validations:
+  required: true
+
+* type: textarea
+  id: logs
+  attributes:
+  label: Logs
+  description: Paste any relevant logs, error messages, stack traces, or service messages.
+  render: text
+  placeholder: Paste logs here.
+  validations:
+  required: false
+
+* type: textarea
+  id: screenshots
+  attributes:
+  label: Screenshots
+  description: Attach any relevant screenshots, images, or screen recordings.
+  placeholder: Drag and drop screenshots here.
+  validations:
+  required: false
+
+* type: textarea
+  id: additional_context
+  attributes:
+  label: Additional Context
+  description: Add any other information that may help diagnose the issue.
+  placeholder: Include related issues, branches, commits, timing, customer notes, workaround details, etc.
+  validations:
+  required: false
