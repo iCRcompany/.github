@@ -1,22 +1,106 @@
-name: Feature Request
-description: Request a new feature or enhancement
-title: "[Feature]: "
+name: Feature Request / Design Change
+description: Request a new feature, enhancement, or controlled software design change
+title: "[Feature / Design Change]: "
 labels:
   - enhancement
 body:
   - type: textarea
-    id: feature_description_benefit
+    id: feature_change_summary
     attributes:
-      label: Feature Description / Benefit
-      description: Describe the feature to be implemented and how it will benefit the software, workflow, customer, or user.
+      label: Feature / Change Summary
+      description: Provide a clear summary of the requested feature, enhancement, or software design change.
     validations:
       required: true
 
   - type: textarea
-    id: reason
+    id: reason_benefit
     attributes:
-      label: Reason / Problem Solved
-      description: Why is this feature needed? What problem does it solve?
+      label: Reason / Benefit
+      description: Why is this change needed and what problem does it solve? Include customer, workflow, safety, service, image quality, usability, or business benefit where applicable.
+    validations:
+      required: true
+
+  - type: textarea
+    id: design_requirements_acceptance_criteria
+    attributes:
+      label: Design Requirements / Acceptance Criteria
+      description: List the requirements that must be met for this change to be complete, including measurable acceptance criteria where possible.
+      placeholder: |
+        Requirements:
+        -
+
+        Acceptance Criteria:
+        - [ ]
+        - [ ]
+    validations:
+      required: true
+
+  - type: dropdown
+    id: affected_areas
+    attributes:
+      label: Affected Areas
+      description: Which areas or components are affected by this change?
+      multiple: true
+      options:
+        - Acquisition
+        - Reconstruction
+        - DICOM
+        - Worklist
+        - Installer
+        - Licensing
+        - Hardware / Driver
+        - Calibration
+        - Image Processing
+        - Database
+        - UI / Workflow
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: risk_assessment
+    attributes:
+      label: Risk Assessment
+      description: Describe whether this change affects safety, image quality, patient/customer data, hardware motion, radiation, DICOM/PACS behavior, installation, licensing, or clinical/user workflow. Include risk level and mitigation.
+      placeholder: |
+        Does this change introduce or modify risk?
+        - [ ] No known risk
+        - [ ] Low
+        - [ ] Medium
+        - [ ] High
+
+        Risk explanation:
+
+        Mitigation / reason acceptable:
+    validations:
+      required: true
+
+  - type: textarea
+    id: usability_impact
+    attributes:
+      label: Usability Impact
+      description: Describe whether this change affects user interface, workflow, user decision-making, warnings, prompts, labels, or operator behavior. Use "No usability impact" when applicable.
+    validations:
+      required: true
+
+  - type: textarea
+    id: testing_required
+    attributes:
+      label: Testing Required
+      description: List the testing required before this change can be released.
+      placeholder: |
+        Required testing:
+        - [ ] Unit / developer testing
+        - [ ] Manual workflow testing
+        - [ ] Installer / upgrade testing
+        - [ ] DICOM / PACS testing
+        - [ ] Hardware / acquisition testing
+        - [ ] Reconstruction / image quality testing
+        - [ ] Regression testing
+        - [ ] Other:
+
+        Test notes:
     validations:
       required: true
 
@@ -24,14 +108,46 @@ body:
     id: suggested_implementation
     attributes:
       label: Suggested Implementation
-      description: Suggest how to implement this change, if applicable.
+      description: If known, suggest how to implement this change, including related files, screens, settings, database fields, hardware behavior, or technical notes.
     validations:
       required: false
 
   - type: textarea
-    id: additional_context_references
+    id: design_review_approval
     attributes:
-      label: Additional Context / References
-      description: Provide any additional context, mockups, screenshots, related issues, branches, commits, customer notes, or references.
+      label: Design Review / Approval
+      description: Provide review notes, reviewer names, approval status, or required follow-up.
+      placeholder: |
+        Reviewers:
+
+        Review notes:
+
+        Approval:
+        - [ ] Approved to implement
+        - [ ] Approved for testing
+        - [ ] Approved for release
+        - [ ] Not approved / needs changes
+    validations:
+      required: false
+
+  - type: textarea
+    id: related_pull_requests
+    attributes:
+      label: Related Pull Requests
+      description: List related pull requests, branches, commits, or tags.
+      placeholder: |
+        Pull Requests:
+        - #
+
+        Branches / Commits:
+        -
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional Context
+      description: Add mockups, screenshots, customer notes, related issues, documents, release notes, or any other useful context.
     validations:
       required: false
