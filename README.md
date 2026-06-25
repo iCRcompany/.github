@@ -1,2 +1,17 @@
 # .github
-Organization-level .github repo for shared templates.
+
+This repository contains default GitHub issue templates for the organization.
+
+Templates defined here are automatically used as defaults across all repositories in the organization that do not define their own issue templates.
+
+## Issue Templates
+
+| Template | Description |
+|----------|-------------|
+| [Bug Report](.github/ISSUE_TEMPLATE/bug_report.yml) | Report a software issue or unexpected behavior |
+| [Feature Request](.github/ISSUE_TEMPLATE/feature_request.yml) | Request a new feature or enhancement |
+| [Task](.github/ISSUE_TEMPLATE/task.yml) | Internal development or maintenance task |
+
+## Overriding Templates
+
+Individual repositories can override these defaults by adding their own templates under `.github/ISSUE_TEMPLATE/` within that repository. Repository-level templates take precedence over the organization defaults.
