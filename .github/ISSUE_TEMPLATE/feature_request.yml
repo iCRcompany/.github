@@ -5,25 +5,33 @@ labels:
   - enhancement
 body:
   - type: textarea
-    id: request
+    id: feature_description_benefit
     attributes:
-      label: Request
-      description: Describe the feature or enhancement you would like to see.
+      label: Feature Description / Benefit
+      description: Describe the feature to be implemented and how it will benefit the software, workflow, customer, or user.
     validations:
       required: true
 
   - type: textarea
     id: reason
     attributes:
-      label: Reason
+      label: Reason / Problem Solved
       description: Why is this feature needed? What problem does it solve?
     validations:
       required: true
 
   - type: textarea
-    id: additional_details
+    id: suggested_implementation
     attributes:
-      label: Additional Details
-      description: Any additional context, mockups, or references that may help.
+      label: Suggested Implementation
+      description: Suggest how to implement this change, if applicable.
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional_context_references
+    attributes:
+      label: Additional Context / References
+      description: Provide any additional context, mockups, screenshots, related issues, branches, commits, customer notes, or references.
     validations:
       required: false
