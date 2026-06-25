@@ -2,39 +2,41 @@ name: Feature Request
 description: Request a new feature or enhancement
 title: "[Feature]: "
 labels:
-  - enhancement
-body:
-  - type: textarea
-    id: feature_description
-    attributes:
-      label: Feature Description
-      description: Describe the feature or enhancement you would like to see and how it will benefit the software or workflow.
-      placeholder: Describe what should be added or changed.
-    validations:
-      required: true
 
-  - type: textarea
-    id: reason
-    attributes:
-      label: Reason / Benefit
-      description: Why is this feature needed? What problem does it solve?
-      placeholder: Explain the benefit, customer need, workflow improvement, or problem this addresses.
-    validations:
-      required: true
+* enhancement
+  body:
 
-  - type: textarea
-    id: suggested_implementation
-    attributes:
-      label: Suggested Implementation
-      description: Suggest how to implement this change, if applicable.
-      placeholder: Include any related files, screens, settings, database fields, hardware behavior, or technical notes.
-    validations:
-      required: false
+* type: textarea
+  id: feature_description
+  attributes:
+  label: Feature Description
+  description: Describe the feature or enhancement you would like to see and how it will benefit the software or workflow.
+  placeholder: Describe what should be added or changed.
+  validations:
+  required: true
 
-  - type: textarea
-    id: additional_context
-    attributes:
-      label: Additional Context / References
-      description: Add any additional context, mockups, screenshots, related issues, branches, commits, or references that may help.
-    validations:
-      required: false
+* type: textarea
+  id: reason
+  attributes:
+  label: Reason / Benefit
+  description: Why is this feature needed? What problem does it solve?
+  placeholder: Explain the benefit, customer need, workflow improvement, or problem this addresses.
+  validations:
+  required: true
+
+* type: textarea
+  id: suggested_implementation
+  attributes:
+  label: Suggested Implementation
+  description: Suggest how to implement this change, if applicable.
+  placeholder: Include any related files, screens, settings, database fields, hardware behavior, or technical notes.
+  validations:
+  required: false
+
+* type: textarea
+  id: additional_context
+  attributes:
+  label: Additional Context / References
+  description: Add any additional context, mockups, screenshots, related issues, branches, commits, or references that may help.
+  validations:
+  required: false
