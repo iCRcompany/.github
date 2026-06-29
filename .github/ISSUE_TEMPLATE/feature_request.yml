@@ -105,6 +105,23 @@ body:
       required: true
 
   - type: textarea
+    id: design_inputs_vs_design_outputs
+    attributes:
+      label: Design Inputs vs. Design Outputs
+      description: Document how the final design output satisfies the original design inputs. Design inputs shall be complete, unambiguous, able to be verified or validated, and not in conflict with each other. For each design input, document the related design output, whether the output satisfies the input, and any notes. Use Y when the design output satisfies the design input. Use N when the design output does not satisfy the design input or requires additional work.
+      placeholder: |
+        | Design Input Category | Design Input | Design Output | V.S. Y/N | Notes |
+        |---|---|---|---|---|
+        | Function Request |  |  |  |  |
+        | Performance Goals |  |  |  |  |
+        | Usability / Safety Requirements |  |  |  |  |
+        | Statutory & Regulatory Requirements |  |  |  |  |
+        | Hardware |  |  |  |  |
+        | Other |  |  |  |  |
+    validations:
+      required: false
+
+  - type: textarea
     id: suggested_implementation
     attributes:
       label: Suggested Implementation
