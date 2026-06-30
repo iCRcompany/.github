@@ -12,6 +12,7 @@ Templates defined here are automatically used as defaults across all repositorie
 | [Feature Request](.github/ISSUE_TEMPLATE/feature_request.yml) | Request a new feature or enhancement |
 | [Task](.github/ISSUE_TEMPLATE/task.yml) | Internal development or maintenance task |
 | [Technical Support Issue](.github/ISSUE_TEMPLATE/technical_support.yml) | Track a customer, machine, installation, or field support issue |
+| [Software Risk Analysis](.github/ISSUE_TEMPLATE/software_risk_analysis.yml) | Document software risk analysis, hazards, probability, severity, mitigations, and approval |
 
 ## Overriding Templates
 
