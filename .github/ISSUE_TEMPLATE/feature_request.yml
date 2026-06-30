@@ -1,6 +1,6 @@
-name: Feature Request / Design Change
+name: F-312 Rev B (Feature Request / Design Change)
 description: Request a new feature, enhancement, or controlled software design change
-title: "[Feature / Design Change]: "
+title: "[F-312 Rev B Feature / Design Change]: "
 labels:
   - enhancement
 body:
