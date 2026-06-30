@@ -1,0 +1,312 @@
+name: Software Validation Record
+description: Document software validation, tester profile, test location, usability goals, validation results, and approval
+title: "[Software Validation]: "
+labels:
+  - software validation
+body:
+  - type: input
+    id: design_project_number
+    attributes:
+      label: Design Project Number
+      description: Enter the design project number if assigned.
+      placeholder: DP-XX
+    validations:
+      required: false
+
+  - type: input
+    id: project_name
+    attributes:
+      label: Project Name
+      description: Enter the software project, feature, design change, release, or validation activity.
+    validations:
+      required: true
+
+  - type: input
+    id: overseeing_programmer
+    attributes:
+      label: Overseeing Programmer
+      description: Enter the programmer or software engineer overseeing the validation activity.
+    validations:
+      required: false
+
+  - type: input
+    id: preparer
+    attributes:
+      label: Preparer
+      description: Enter who prepared this software validation record.
+    validations:
+      required: true
+
+  - type: input
+    id: validation_date
+    attributes:
+      label: Validation Date
+      description: Enter the date of validation.
+    validations:
+      required: true
+
+  - type: textarea
+    id: related_github_records
+    attributes:
+      label: Related GitHub Records
+      description: List related GitHub issues, pull requests, release candidate issues, branches, commits, or tags.
+      placeholder: |
+        Feature Request / Design Change:
+        - #
+
+        Bug Reports / Technical Support Issues:
+        - #
+
+        Software Design Review:
+        - #
+
+        Software Risk Analysis:
+        - #
+
+        Pull Requests:
+        - #
+
+        Release Candidate:
+        - #
+
+        Branches / Commits / Tags:
+        -
+    validations:
+      required: true
+
+  - type: dropdown
+    id: product_device_description
+    attributes:
+      label: Product / Device Description
+      description: Select the product or device area covered by this validation.
+      options:
+        - CR
+        - DR
+        - Scanner
+        - CBCT
+        - DICOM / PACS / Worklist
+        - Installer / Upgrade
+        - Licensing
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: other_product_device_description
+    attributes:
+      label: Other Product / Device Description
+      description: Provide additional product or device description if "Other" is selected.
+    validations:
+      required: false
+
+  - type: textarea
+    id: tester_profile
+    attributes:
+      label: Tester Profile
+      description: Identify who tested the software or device workflow, including tester name, role, department, and experience level.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: tester_training
+    attributes:
+      label: Tester Training
+      description: Select all applicable training status items.
+      options:
+        - label: Requires training
+        - label: No training required
+        - label: Applications training completed
+        - label: User manual reviewed
+        - label: Other training completed
+        - label: Training not applicable
+    validations:
+      required: true
+
+  - type: textarea
+    id: training_notes
+    attributes:
+      label: Training Notes
+      description: Provide training details, user manual reference, application specialist involvement, or other training notes.
+    validations:
+      required: false
+
+  - type: input
+    id: validation_location
+    attributes:
+      label: Validation Location
+      description: Enter where validation was performed.
+      placeholder: In-house, hospital, customer site, test lab, production area, etc.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: design_stage
+    attributes:
+      label: Design Stage
+      description: Select the current design stage for this validation.
+      options:
+        - Prototype testing
+        - Alpha testing
+        - Beta testing
+        - Release candidate testing
+        - Production release validation
+        - Post-release validation
+        - Regression validation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: validation_scope
+    attributes:
+      label: Validation Scope
+      description: Describe what was validated.
+      placeholder: |
+        Software version:
+        Installer version/location:
+        Feature/change being validated:
+        Affected workflows:
+        Affected hardware/software configuration:
+        Expected result:
+    validations:
+      required: true
+
+  - type: textarea
+    id: usability_goals
+    attributes:
+      label: Usability Goals
+      description: State whether the product met usability goals and reference the related Feature Request / Design Change issue, Usability Impact section, Software Risk Analysis issue, or Software Design Review issue.
+      placeholder: |
+        Usability goals reviewed:
+        -
+
+        Did the product meet its usability goals?
+        - [ ] Yes
+        - [ ] No
+        - [ ] Not applicable
+
+        Notes:
+    validations:
+      required: true
+
+  - type: textarea
+    id: validation_test_plan
+    attributes:
+      label: Validation Test Plan
+      description: Provide the validation test method, test cases, expected results, and acceptance criteria.
+      placeholder: |
+        | Test Case / Workflow | Expected Result | Actual Result | Pass/Fail | Notes |
+        |---|---|---|---|---|
+        |  |  |  |  |  |
+    validations:
+      required: true
+
+  - type: textarea
+    id: validation_results
+    attributes:
+      label: Validation Results
+      description: Summarize validation testing results, whether software performs as intended, whether acceptance criteria were met, and whether any issues were found.
+    validations:
+      required: true
+
+  - type: textarea
+    id: issues_found_during_validation
+    attributes:
+      label: Issues Found During Validation
+      description: List issues found during validation and link new GitHub Bug Report, Technical Support Issue, Task, or Feature Request / Design Change issues when applicable.
+      placeholder: |
+        Issues found:
+        -
+
+        Related follow-up issues:
+        - #
+    validations:
+      required: false
+
+  - type: textarea
+    id: regression_performance_testing_summary
+    attributes:
+      label: Regression / Performance Testing Summary
+      description: Summarize regression testing, performance testing, installer testing, DICOM/PACS testing, hardware/acquisition testing, reconstruction/image quality testing, licensing testing, or other applicable testing.
+    validations:
+      required: false
+
+  - type: textarea
+    id: risk_review
+    attributes:
+      label: Risk Review
+      description: State whether validation affects risk controls or residual risk.
+      placeholder: |
+        Risk controls verified:
+        -
+
+        Residual risk acceptable?
+        - [ ] Yes
+        - [ ] No
+        - [ ] Not applicable
+
+        Related Software Risk Analysis issue:
+        - #
+
+        Notes:
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional_user_comments
+    attributes:
+      label: Additional User Comments
+      description: Include tester, user, customer, application specialist, technical support, or software team comments.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: validation_outcome
+    attributes:
+      label: Validation Outcome
+      description: Select the outcome of this validation.
+      options:
+        - Passed
+        - Passed with notes
+        - Failed - changes required
+        - Blocked - cannot complete validation
+        - Deferred
+        - Not applicable
+    validations:
+      required: true
+
+  - type: textarea
+    id: required_follow_up_actions
+    attributes:
+      label: Required Follow-Up Actions
+      description: List action items, responsible person, due date, and status.
+      placeholder: |
+        | Action Item | Responsible Person | Due Date | Status |
+        |---|---|---|---|
+        |  |  |  |  |
+    validations:
+      required: false
+
+  - type: input
+    id: programmer_approval
+    attributes:
+      label: Programmer Approval
+      description: Enter programmer/software engineer approval name or GitHub username.
+    validations:
+      required: false
+
+  - type: input
+    id: manager_approval
+    attributes:
+      label: Manager Approval
+      description: Enter manager approval name or GitHub username.
+    validations:
+      required: false
+
+  - type: textarea
+    id: final_approval_notes
+    attributes:
+      label: Final Approval Notes
+      description: Provide final approval notes, release decision notes, or reason validation is accepted or rejected.
+    validations:
+      required: false
