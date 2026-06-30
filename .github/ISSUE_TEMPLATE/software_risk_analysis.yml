@@ -1,6 +1,6 @@
-name: Software Risk Analysis
+name: F-316 Rev B Software Risk Analysis
 description: Document software risk analysis, hazards, probability, severity, mitigations, and approval
-title: "[Risk Analysis]: "
+title: "[F-316 Rev B Risk Analysis]: "
 labels:
   - risk analysis
 body:
