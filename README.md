@@ -12,7 +12,7 @@ Templates defined here are automatically used as defaults across all repositorie
 | [Feature Request](.github/ISSUE_TEMPLATE/feature_request.yml) | Request a new feature or enhancement |
 | [Task](.github/ISSUE_TEMPLATE/task.yml) | Internal development or maintenance task |
 | [Technical Support Issue](.github/ISSUE_TEMPLATE/technical_support.yml) | Track a customer, machine, installation, or field support issue |
-| [F-313 Rev A (Software Design Review)](.github/ISSUE_TEMPLATE/software_design_review.yml) | Document a formal software design review, action items, approvals, and follow-up |
+| [F-313 Rev B (Software Design Review)](.github/ISSUE_TEMPLATE/software_design_review.yml) | Document a formal software design review, action items, approvals, and follow-up |
 | [F-314 Rev B (Software Validation Record)](.github/ISSUE_TEMPLATE/software_validation_record.yml) | Document software validation, tester profile, test location, usability goals, validation results, and approval |
 | [F-316 Rev B (Software Risk Analysis)](.github/ISSUE_TEMPLATE/software_risk_analysis.yml) | Document software risk analysis, hazards, probability, severity, mitigations, and approval |
 
