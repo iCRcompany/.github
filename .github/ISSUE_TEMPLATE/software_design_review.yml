@@ -1,0 +1,240 @@
+name: Software Design Review
+description: Document a formal software design review, action items, approvals, and follow-up
+title: "[Design Review]: "
+labels:
+  - design review
+body:
+  - type: input
+    id: design_project_number
+    attributes:
+      label: Design Project Number
+      description: Enter the design project number if assigned.
+      placeholder: DP-XX
+    validations:
+      required: false
+
+  - type: input
+    id: project_name
+    attributes:
+      label: Project Name
+      description: Enter the software project, feature, design change, or release being reviewed.
+    validations:
+      required: true
+
+  - type: input
+    id: review_date
+    attributes:
+      label: Review Date
+      description: Enter the date of the design review.
+    validations:
+      required: true
+
+  - type: input
+    id: review_conducted_by
+    attributes:
+      label: Review Conducted By
+      description: Who conducted or led the review?
+    validations:
+      required: true
+
+  - type: input
+    id: prepared_by
+    attributes:
+      label: Prepared By
+      description: Who prepared the design review record?
+    validations:
+      required: true
+
+  - type: textarea
+    id: participants_present
+    attributes:
+      label: Employees / Participants Present
+      description: List all employees and participants present, including software, management, quality, regulatory, sales, marketing, technical support, application specialists, or other participants as applicable.
+    validations:
+      required: true
+
+  - type: textarea
+    id: related_github_records
+    attributes:
+      label: Related GitHub Records
+      description: List related GitHub issues, pull requests, release candidate issues, branches, commits, or tags.
+      placeholder: |
+        Feature Request / Design Change:
+        - #
+
+        Bug Reports / Support Issues:
+        - #
+
+        Pull Requests:
+        - #
+
+        Release Candidate:
+        - #
+
+        Branches / Commits / Tags:
+        -
+    validations:
+      required: true
+
+  - type: textarea
+    id: review_overview
+    attributes:
+      label: Review Overview
+      description: Summarize the design review and explain whether the design is aligned with the project goals, requirements, risk controls, usability needs, and expected release plan. Include design standards, alignment, diligence, design verification, and design validation.
+    validations:
+      required: true
+
+  - type: textarea
+    id: design_verification
+    attributes:
+      label: Design Verification
+      description: Document whether the design outputs satisfy the design inputs and acceptance criteria. Include references to the Feature Request / Design Change issue, Design Inputs vs. Design Outputs section, pull requests, test results, or other evidence.
+      placeholder: |
+        Design inputs reviewed:
+        -
+
+        Design outputs reviewed:
+        -
+
+        Do outputs satisfy inputs?
+        - [ ] Yes
+        - [ ] No
+        - [ ] Needs additional work
+
+        Notes:
+    validations:
+      required: true
+
+  - type: textarea
+    id: design_validation
+    attributes:
+      label: Design Validation
+      description: Document whether the design is expected to meet intended use and user needs. Include workflow, usability, customer need, safety, image quality, installation, DICOM/PACS, licensing, hardware, or other applicable validation considerations.
+    validations:
+      required: true
+
+  - type: textarea
+    id: project_status_delivery
+    attributes:
+      label: Project Status and Delivery Date
+      description: Is the project expected to meet the delivery date? Include schedule risks, checkpoints, and expected completion dates.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: cross_functional_review
+    attributes:
+      label: Cross-Functional Review
+      description: Indicate whether people outside the design team have been involved at appropriate points.
+      options:
+        - label: Software
+        - label: Technical Support
+        - label: Sales
+        - label: Marketing
+        - label: Regulatory
+        - label: Quality
+        - label: Production
+        - label: Financial / Management
+        - label: Application Specialist
+        - label: Other / Not applicable
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: process_records_review
+    attributes:
+      label: Process and Records Review
+      description: Confirm that all applicable process and records requirements have been reviewed.
+      options:
+        - label: Design process followed according to QP-027 / QP-028 as applicable
+        - label: Feature Request / Design Change issue is complete or updated
+        - label: Design requirements / acceptance criteria reviewed
+        - label: Risk assessment reviewed
+        - label: Usability impact reviewed
+        - label: Testing required reviewed
+        - label: Related pull requests reviewed
+        - label: Release Candidate issue reviewed, if applicable
+        - label: Required records are linked or attached
+        - label: Open issues or missing records are documented
+    validations:
+      required: true
+
+  - type: textarea
+    id: management_direction
+    attributes:
+      label: Management Direction
+      description: Reviewing management should provide creative direction, project goals, must-haves, wants, definite no-go items, and expected time frame.
+      placeholder: |
+        Must Haves:
+        -
+
+        Wants:
+        -
+
+        Definite NOs:
+        -
+
+        Management direction / expectations:
+        -
+    validations:
+      required: false
+
+  - type: textarea
+    id: action_items
+    attributes:
+      label: Action Items
+      description: List action items for reviewing management and the design team.
+      placeholder: |
+        | Action Item | Responsible Person | Due Date | Status |
+        |---|---|---|---|
+        |  |  |  |  |
+    validations:
+      required: true
+
+  - type: textarea
+    id: roles_responsibilities
+    attributes:
+      label: Roles and Responsibilities
+      description: Document project roles, responsibility changes, and expectations for each role.
+    validations:
+      required: false
+
+  - type: textarea
+    id: budget_resource_concerns
+    attributes:
+      label: Budget / Resource Concerns
+      description: Document any budget, staffing, equipment, schedule, or resource concerns.
+    validations:
+      required: false
+
+  - type: textarea
+    id: next_meeting_follow_up
+    attributes:
+      label: Next Meeting / Follow-Up
+      description: Document the next meeting date, checkpoints, required documents, preparatory materials, and who should be contacted when checkpoints are met.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: design_review_outcome
+    attributes:
+      label: Design Review Outcome
+      description: Select the outcome of this design review.
+      options:
+        - Approved to continue
+        - Approved with action items
+        - Needs changes before continuing
+        - Not approved
+        - Ready for regression / performance testing
+        - Ready for release candidate review
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: final_review_notes
+    attributes:
+      label: Final Review Notes
+      description: Provide any final review notes, special or extraordinary requests, unresolved issues, recourse if action items are not completed, and management decision basis.
+    validations:
+      required: false
