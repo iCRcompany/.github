@@ -1,6 +1,6 @@
-name: F-316 Software Risk Analysis
+name: Software Risk Analysis
 description: Document software risk analysis, hazards, probability, severity, mitigations, and approval
-title: "[F-316 Risk Analysis]: "
+title: "[Risk Analysis]: "
 labels:
   - risk analysis
 body:
