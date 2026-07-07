@@ -1,0 +1,13 @@
+name: Documentation
+description: Create a documentation issue
+title: "[Documentation]: "
+labels:
+  - documentation
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      placeholder: Describe the documentation change, update, correction, or review needed.
+    validations:
+      required: false

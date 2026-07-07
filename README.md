@@ -10,6 +10,7 @@ Templates defined here are automatically used as defaults across all repositorie
 |----------|-------------|
 | [Bug Report](.github/ISSUE_TEMPLATE/bug_report.yml) | Report a software issue or unexpected behavior |
 | [Employee Acknowledgment](.github/ISSUE_TEMPLATE/employee_acknowledgment.yml) | Create an employee acknowledgment issue |
+| [Documentation](.github/ISSUE_TEMPLATE/documentation.yml) | Create a documentation issue |
 | [Task](.github/ISSUE_TEMPLATE/task.yml) | Internal development or maintenance task |
 | [Technical Support Issue](.github/ISSUE_TEMPLATE/technical_support.yml) | Track a customer, machine, installation, or field support issue |
 | [F-312 Rev B (Feature Request / Design Change)](.github/ISSUE_TEMPLATE/feature_request.yml) | Request a new feature or enhancement |
