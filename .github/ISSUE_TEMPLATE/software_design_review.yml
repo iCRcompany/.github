@@ -1,6 +1,6 @@
-name: F-313 (Software Design Review)
+name: Software Design Review
 description: Document a formal software design review, action items, approvals, and follow-up
-title: "[F-313 Design Review]: "
+title: "[Design Review]: "
 labels:
   - design review
 body:
