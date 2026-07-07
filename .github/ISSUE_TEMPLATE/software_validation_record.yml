@@ -1,6 +1,6 @@
-name: F-314 Software Validation Record
+name: Software Validation Record
 description: Document software validation, tester profile, test location, usability goals, validation results, and approval
-title: "[F-314 Software Validation]: "
+title: "[Software Validation]: "
 labels:
   - software validation
 body:
