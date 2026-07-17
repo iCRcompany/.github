@@ -6,7 +6,11 @@
 
 - [ ] Please check the PR title matches the content at merge time.
 - [ ] Have you summarized your changes in the `changelog.md` file?
-- [ ] Does this change contain unit tests or was it tested manually?
+- [ ] Were unit tests run on the changed sections of the code?
+- [ ] Was this change tested manually?
+
+
+... fill in with summary of testing ...
 
 ### Risk Asssessment
 
