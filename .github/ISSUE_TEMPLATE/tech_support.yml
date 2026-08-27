@@ -1,6 +1,6 @@
 name: Public Bug Report
 description: Report a software issue or unexpected behavior in a customer environment
-title: "[Public Bug]: (Customer Name - Product - Version) DESCRIPTION"
+title: "[Public Bug]: ([CustomerName] - [HardwareProduct] - [SoftwareVersion]) Description:"
 labels:
   - bug
 body:
@@ -9,6 +9,37 @@ body:
     attributes:
       label: Issue Summary
       description: Briefly summarize the issue.
+    validations:
+      required: true
+
+  - type: textarea
+    id: enduser_info
+    attributes:
+      label: End User / Customer Information
+      description: Provide any relevant information about the end user or customer, such as contact details, or company
+      placeholder: |
+        Company Name:
+        Contact Name:
+        Contact Email:
+        Contact Phone:
+    validations:
+      required: false
+
+  - type: input
+    id: team_viewer_id_password
+    attributes:
+      label: Team Viewer ID and Password
+      description: What is the Team Viewer ID and Password?
+      placeholder: e.g. ##-####
+    validations:
+      required: true
+
+  - type: input
+    id: sage_crm_case_number
+    attributes:
+      label: Sage CRM Case Number
+      description: What is the Sage CRM Case Number assigned?
+      placeholder: e.g. ##-####
     validations:
       required: true
 
@@ -91,20 +122,6 @@ body:
     attributes:
       label: Screenshots
       description: Attach screenshots, images, or screen recordings that help illustrate the issue.
-    validations:
-      required: false
-
-  - type: textarea
-    id: enduser_info
-    attributes:
-      label: End User / Customer Information
-      description: Provide any relevant information about the end user or customer, such as contact details, or company
-      placeholder: |
-        Company Name:
-        Contact Name:
-        Contact Email:
-        Contact Phone:
-        TeamViewer ID / Password:
     validations:
       required: false
 
