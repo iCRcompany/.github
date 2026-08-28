@@ -26,13 +26,13 @@ body:
       required: false
 
   - type: input
-    id: team_viewer_id_password
-    attributes:
-      label: Team Viewer ID and Password
-      description: What is the Team Viewer ID and Password?
-      placeholder: e.g. ##-####
-    validations:
-      required: true
+  id: team_viewer_id
+  attributes:
+    label: TeamViewer ID
+    description: Enter the TeamViewer ID only. Do not enter passwords or other credentials.
+    placeholder: e.g. 123 456 789
+  validations:
+    required: false
 
   - type: input
     id: sage_crm_case_number
