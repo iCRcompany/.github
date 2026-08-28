@@ -1,8 +1,10 @@
+```yaml
 name: Public Bug Report
 description: Report a software issue or unexpected behavior in a customer environment
 title: "[Public Bug]: ([CustomerName] - [HardwareProduct] - [SoftwareVersion]) Description:"
 labels:
   - bug
+
 body:
   - type: textarea
     id: issue_summary
@@ -16,7 +18,7 @@ body:
     id: enduser_info
     attributes:
       label: End User / Customer Information
-      description: Provide any relevant information about the end user or customer, such as contact details, or company
+      description: Provide any relevant information about the end user or customer, such as contact details or company.
       placeholder: |
         Company Name:
         Contact Name:
@@ -26,13 +28,13 @@ body:
       required: false
 
   - type: input
-  id: team_viewer_id
-  attributes:
-    label: TeamViewer ID
-    description: Enter the TeamViewer ID only. Do not enter passwords or other credentials.
-    placeholder: e.g. 123 456 789
-  validations:
-    required: false
+    id: team_viewer_id
+    attributes:
+      label: TeamViewer ID
+      description: Enter the TeamViewer ID only. Do not enter passwords or other credentials.
+      placeholder: e.g. 123 456 789
+    validations:
+      required: false
 
   - type: input
     id: sage_crm_case_number
@@ -66,7 +68,7 @@ body:
         Recotom Version:
         Vivix / DR SDK Version:
         Operating System:
-        Serial number:
+        Serial Number:
         Model:
     validations:
       required: false
@@ -132,3 +134,4 @@ body:
       description: Add any other context such as related issues, branches, commits, timing, customer notes, workaround details, or anything else that may be useful.
     validations:
       required: false
+```
