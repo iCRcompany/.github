@@ -26,7 +26,7 @@ body:
     attributes:
       label: Observed Machine
       description: Provide details about the machine, scanner, detector, operating system, or hardware where the issue was observed.
-      placeholder: |
+      value: |
         Customer/Site:
         Computer Name:
         Windows Version:
