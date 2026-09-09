@@ -44,6 +44,24 @@ body:
   - type: markdown
     attributes:
       value: |
+        ## DR Panel
+
+  - type: textarea
+    id: dr_panel
+    attributes:
+      label: DR Panel History
+      description: Add a new row for each change. Do not overwrite previous entries.
+      value: |
+        | Model | Serial Number | Date Installed | Notes of Installation |
+        | --- | --- | --- | --- |
+        | [Model] | [Serial Number] | [Date Installed] | [Notes of Installation] |
+        |  |  |  |  |
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
         ## Software History
 
   - type: textarea
@@ -54,7 +72,8 @@ body:
       value: |
         | Version | Date Installed | Notes of Installation |
         | --- | --- | --- |
-        | | | |
+        | [Version] | [Date Installed] | [Notes of Installation] |
+        |  |  |  |
     validations:
       required: true
 
@@ -71,7 +90,8 @@ body:
       value: |
         | Version | Date Installed | Notes of Installation |
         | --- | --- | --- |
-        | | | |
+        | [Version] | [Date Installed] | [Notes of Installation] |
+        |  |  |  |
     validations:
       required: true
 
@@ -88,7 +108,8 @@ body:
       value: |
         | Serial Number | Version | Date Installed | Notes of Installation |
         | --- | --- | --- | --- |
-        | | | | |
+        | [Serial Number] | [Version] | [Date Installed] | [Notes of Installation] |
+        |  |  |  |  |
     validations:
       required: true
 
@@ -105,7 +126,8 @@ body:
       value: |
         | Serial Number | Version | Date Installed | Notes of Installation |
         | --- | --- | --- | --- |
-        | | | | |
+        | [Serial Number] | [Version] | [Date Installed] | [Notes of Installation] |
+        |  |  |  |  |
     validations:
       required: true
 
@@ -122,6 +144,7 @@ body:
       value: |
         | Serial Number | Version | Date Installed | Notes of Installation |
         | --- | --- | --- | --- |
-        | | | | |
+        | [Serial Number] | [Version] | [Date Installed] | [Notes of Installation] |
+        |  |  |  |  |
     validations:
       required: true
