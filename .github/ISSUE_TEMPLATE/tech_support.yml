@@ -13,6 +13,16 @@ body:
     validations:
       required: true
 
+  - type: dropdown
+    id: choose-option
+    attributes:
+      label: "Please select a warranty option"
+      options:
+        - "Customer is **not** under warranty"
+        - "Customer is under warranty"
+    validations:
+      required: true
+
   - type: textarea
     id: enduser_info
     attributes:
