@@ -58,7 +58,7 @@ body:
     attributes:
       label: Related GitHub Records
       description: List related GitHub issues, pull requests, release candidate issues, branches, commits, or tags.
-      placeholder: |
+      value: |
         Feature Request / Design Change:
         - #
 
@@ -89,7 +89,7 @@ body:
     attributes:
       label: Design Verification
       description: Document whether the design outputs satisfy the design inputs and acceptance criteria. Include references to the Feature Request / Design Change issue, Design Inputs vs. Design Outputs section, pull requests, test results, or other evidence.
-      placeholder: |
+      value: |
         Design inputs reviewed:
         -
 
@@ -164,7 +164,7 @@ body:
     attributes:
       label: Management Direction
       description: Reviewing management should provide creative direction, project goals, must-haves, wants, definite no-go items, and expected time frame.
-      placeholder: |
+      value: |
         Must Haves:
         -
 
@@ -184,7 +184,7 @@ body:
     attributes:
       label: Action Items
       description: List action items for reviewing management and the design team.
-      placeholder: |
+      value: |
         | Action Item | Responsible Person | Due Date | Status |
         |---|---|---|---|
         |  |  |  |  |

@@ -18,7 +18,7 @@ body:
     attributes:
       label: Changelog
       description: List the changes included in this release candidate.
-      placeholder: |
+      value: |
         Added:
         - 
 
@@ -38,7 +38,7 @@ body:
     attributes:
       label: Installer Location
       description: Provide the installer path, shared folder, GitHub release link, or build artifact location.
-      placeholder: |
+      value: |
         Installer:
         Readme:
         Build artifacts:
@@ -51,7 +51,7 @@ body:
     attributes:
       label: Source Branch / Commit
       description: Provide the exact source branch, commit hash, tag, or build reference used to create the release candidate.
-      placeholder: |
+      value: |
         Branch:
         Commit:
         Tag:
@@ -64,7 +64,7 @@ body:
     attributes:
       label: Related Issues / Pull Requests
       description: List related GitHub issues, feature requests/design changes, bug reports, support issues, and pull requests.
-      placeholder: |
+      value: |
         Issues:
         - #
 
@@ -111,7 +111,7 @@ body:
     attributes:
       label: Known Issues
       description: Describe known issues, limitations, workarounds, skipped tests, or items intentionally deferred.
-      placeholder: |
+      value: |
         Known issues:
         - 
 
