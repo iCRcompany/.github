@@ -18,8 +18,10 @@ body:
     attributes:
       label: "Please select a warranty option"
       options:
-        - "Customer is **not** under warranty"
-        - "Customer is under warranty"
+        - "❓ Customer warranty status unknown"
+        - "👀 Actively investigating customer warranty status"
+        - "❌ Customer is NOT under warranty"
+        - "✔️ Customer is under warranty"
     validations:
       required: true
 
