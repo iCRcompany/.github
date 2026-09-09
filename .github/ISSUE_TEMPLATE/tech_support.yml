@@ -30,7 +30,7 @@ body:
     attributes:
       label: End User / Customer Information
       description: Provide any relevant information about the end user or customer, such as contact details or company.
-      placeholder: |
+      value: |
         Company Name:
         Contact Name:
         Contact Email:
