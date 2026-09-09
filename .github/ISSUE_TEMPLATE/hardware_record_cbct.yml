@@ -1,0 +1,127 @@
+name: CBCT Hardware Record
+description: Create and maintain the hardware, software, and firmware history for a CBCT machine
+title: "[Hardware Record CBCT] (Serial Number) (Model) (Customer/Location)"
+labels:
+  - hardware-record
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # CBCT Hardware Record
+
+        This issue is the permanent hardware configuration and service history
+        for this CBCT machine.
+
+        Update this issue whenever software, firmware, or hardware is changed.
+
+        **Add new history rows. Do not overwrite previous entries.**
+
+  - type: input
+    id: hardware_serial_number
+    attributes:
+      label: Hardware Serial Number
+      placeholder: Enter hardware serial number
+    validations:
+      required: true
+
+  - type: input
+    id: hardware_model
+    attributes:
+      label: Hardware Model
+      placeholder: Enter hardware model
+    validations:
+      required: true
+
+  - type: input
+    id: customer_location
+    attributes:
+      label: Customer / Location
+      placeholder: Enter customer name and/or location
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Software History
+
+  - type: textarea
+    id: software_history
+    attributes:
+      label: Software History
+      description: Add a new row for each change. Do not overwrite previous entries.
+      value: |
+        | Version | Date Installed | Notes of Installation |
+        | --- | --- | --- |
+        | | | |
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Monoblock Firmware History
+
+  - type: textarea
+    id: monoblock_firmware_history
+    attributes:
+      label: Monoblock Firmware History
+      description: Add a new row for each change. Do not overwrite previous entries.
+      value: |
+        | Version | Date Installed | Notes of Installation |
+        | --- | --- | --- |
+        | | | |
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## IMD Inverter
+
+  - type: textarea
+    id: imd_inverter
+    attributes:
+      label: IMD Inverter History
+      description: Add a new row for each change. Do not overwrite previous entries.
+      value: |
+        | Serial Number | Version | Date Installed | Notes of Installation |
+        | --- | --- | --- | --- |
+        | | | | |
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## IMD Rotor
+
+  - type: textarea
+    id: imd_rotor
+    attributes:
+      label: IMD Rotor History
+      description: Add a new row for each change. Do not overwrite previous entries.
+      value: |
+        | Serial Number | Version | Date Installed | Notes of Installation |
+        | --- | --- | --- | --- |
+        | | | | |
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## IMD Filament
+
+  - type: textarea
+    id: imd_filament
+    attributes:
+      label: IMD Filament History
+      description: Add a new row for each change. Do not overwrite previous entries.
+      value: |
+        | Serial Number | Version | Date Installed | Notes of Installation |
+        | --- | --- | --- | --- |
+        | | | | |
+    validations:
+      required: true
