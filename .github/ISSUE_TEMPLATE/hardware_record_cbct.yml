@@ -148,3 +148,32 @@ body:
         |  |  |  |  |
     validations:
       required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Recotom Version
+
+  - type: textarea
+    id: recotom_version
+    attributes:
+      label: Recotom Version
+      description: Add a new row for each change. Do not overwrite previous entries.
+      value: |
+        | Version | Date Installed | Notes of Installation |
+        | --- | --- | --- |
+        | [Version] | [Date Installed] | [Notes of Installation] |
+        |  |  |  |
+    validations:
+      required: true
+
+  - type: dropdown
+    id: motorized_exam_table
+    attributes:
+      label: Motorized Exam Table
+      description: Specify whether this CBCT is equipped with a motorized exam table.
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: true
