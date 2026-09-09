@@ -25,7 +25,7 @@ body:
     attributes:
       label: Design Requirements / Acceptance Criteria
       description: List the requirements that must be met for this change to be complete, including measurable acceptance criteria where possible.
-      placeholder: |
+      value: |
         Requirements:
         -
 
@@ -63,7 +63,7 @@ body:
     attributes:
       label: Risk Assessment
       description: Describe whether this change affects safety, image quality, patient/customer data, hardware motion, radiation, DICOM/PACS behavior, installation, licensing, or clinical/user workflow. Include risk level and mitigation.
-      placeholder: |
+      value: |
         Does this change introduce or modify risk?
         - [ ] No known risk
         - [ ] Low
@@ -89,7 +89,7 @@ body:
     attributes:
       label: Testing Required
       description: List the testing required before this change can be released.
-      placeholder: |
+      value: |
         Required testing:
         - [ ] Unit / developer testing
         - [ ] Manual workflow testing
@@ -109,7 +109,7 @@ body:
     attributes:
       label: Design Inputs vs. Design Outputs
       description: Document how the final design output satisfies the original design inputs. Design inputs shall be complete, unambiguous, able to be verified or validated, and not in conflict with each other. For each design input, document the related design output, whether the output satisfies the input, and any notes. Use Y when the design output satisfies the design input. Use N when the design output does not satisfy the design input or requires additional work.
-      placeholder: |
+      value: |
         | Design Input Category | Design Input | Design Output | V.S. Y/N | Notes |
         |---|---|---|---|---|
         | Function Request |  |  |  |  |
@@ -134,7 +134,7 @@ body:
     attributes:
       label: Design Review / Approval
       description: Provide review notes, reviewer names, approval status, or required follow-up.
-      placeholder: |
+      value: |
         Reviewers:
 
         Review notes:
@@ -152,7 +152,7 @@ body:
     attributes:
       label: Related Pull Requests
       description: List related pull requests, branches, commits, or tags.
-      placeholder: |
+      value: |
         Pull Requests:
         - #
 
