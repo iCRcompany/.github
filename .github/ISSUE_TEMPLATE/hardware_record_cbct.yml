@@ -52,10 +52,46 @@ body:
       label: DR Panel History
       description: Add a new row for each change. Do not overwrite previous entries.
       value: |
-        | Model | Serial Number | Date Installed | Notes of Installation |
-        | --- | --- | --- | --- |
-        | [Model] | [Serial Number] | [Date Installed] | [Notes of Installation] |
-        |  |  |  |  |
+        | Manufacturer | Model | Serial Number | Date Installed | Notes of Installation |
+        | --- | --- | --- | --- | --- |
+        | [Manufacturer] | [Model] | [Serial Number] | [Date Installed] | [Notes of Installation] |
+        |  |  |  |  |  |
+    validations:
+      required: true
+
+    - type: markdown
+    attributes:
+      value: |
+        ### NVidia Graphic Card: 
+
+  - type: textarea
+    id: nvidia_graphics_card
+    attributes:
+      label: NVidia Graphic Card History
+      description: Add a new row for each driver change. Do not overwrite previous entries.
+      value: |
+        | Version | Date Installed | Notes of Installation |
+        | --- | --- | --- |        
+        | [Version] | [Date Installed] | [Notes of Installation] |
+        |  |  |  |
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ### Intel Network Adapter: 
+
+  - type: textarea
+    id: intel_network_adapter
+    attributes:
+      label: Intel Network Adapter History
+      description: Add a new row for each driver change. Do not overwrite previous entries.
+      value: |
+        | Version | Date Installed | Notes of Installation |
+        | --- | --- | --- |        
+        | [Version] | [Date Installed] | [Notes of Installation] |
+        |  |  |  |
     validations:
       required: true
 
@@ -175,5 +211,18 @@ body:
       options:
         - "Yes"
         - "No"
+    validations:
+      required: true
+
+  - type: textarea
+    id: issues
+    attributes:
+      label: Issues
+      description: Description of issues.
+      value: |
+        | Issue Description| Date | Solution |
+        | --- | --- | --- |
+        | [Issue Description] | [Date] | [Solution] |
+        |  |  |  |
     validations:
       required: true
