@@ -59,19 +59,19 @@ body:
     validations:
       required: true
 
-    - type: markdown
+  - type: markdown
     attributes:
       value: |
-        ### NVidia Graphic Card: 
+        ### NVIDIA Graphics Card
 
   - type: textarea
     id: nvidia_graphics_card
     attributes:
-      label: NVidia Graphic Card History
+      label: NVIDIA Graphics Card History
       description: Add a new row for each driver change. Do not overwrite previous entries.
       value: |
         | Version | Date Installed | Notes of Installation |
-        | --- | --- | --- |        
+        | --- | --- | --- |
         | [Version] | [Date Installed] | [Notes of Installation] |
         |  |  |  |
     validations:
@@ -80,7 +80,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        ### Intel Network Adapter: 
+        ### Intel Network Adapter
 
   - type: textarea
     id: intel_network_adapter
@@ -89,7 +89,7 @@ body:
       description: Add a new row for each driver change. Do not overwrite previous entries.
       value: |
         | Version | Date Installed | Notes of Installation |
-        | --- | --- | --- |        
+        | --- | --- | --- |
         | [Version] | [Date Installed] | [Notes of Installation] |
         |  |  |  |
     validations:
@@ -220,7 +220,7 @@ body:
       label: Issues
       description: Description of issues.
       value: |
-        | Issue Description| Date | Solution |
+        | Issue Description | Date | Solution |
         | --- | --- | --- |
         | [Issue Description] | [Date] | [Solution] |
         |  |  |  |
